@@ -9,7 +9,6 @@ model = fasttext.load_model("lid.176.bin")
 
 def get_language_name(lang_code):
     language = pycountry.languages.get(alpha_2=lang_code)
-    language = pycountry.languages.get(alpha_3=lang_code)
     return language.name if language else lang_code
 
 def contains_valid_letters(text):
