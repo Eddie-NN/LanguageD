@@ -45,8 +45,8 @@ def detect_language(event=None):
     entry.delete(0, tk.END)
 
 root = tk.Tk()
-root.title("Language Detector")
-root.geometry("400x150")
+root.title("تشخیص زبان")
+root.geometry("350x150")
 
 label = tk.Label(root, text=":جمله یا کلمه را وارد کنید")
 label.pack(pady=10)
@@ -55,7 +55,7 @@ entry = tk.Entry(root, width=50)
 entry.pack(pady=5)
 entry.focus()
 
-button = tk.Button(root, text="Detect", command=detect_language)
+button = tk.Button(root, text="تشخیص", command=detect_language)
 button.pack(pady=10)
 
 root.bind('<Return>', detect_language)
