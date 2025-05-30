@@ -41,7 +41,7 @@ def detect_language(event=None):
     lang_code = labels[0].replace("__label__", "")
     lang_name = get_language_name(lang_code)
 
-    messagebox.showinfo("Result", f"زبان تشخیص داده شده : {lang_name}\nاعتماد: {confidence:.2f}")
+    messagebox.showinfo("Result", f"زبان تشخیص داده شده : {lang_name}\nاعتماد: %{confidence*100:.2f}")
     entry.delete(0, tk.END)
 
 root = tk.Tk()
